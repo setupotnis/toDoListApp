@@ -1,0 +1,20 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+  border-radius: 10px;
+  padding: 16px;
+  margin: 4px auto;
+  width: 90%;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  height: fit-content;
+  outline: none;
+  color: #fff;
+}
