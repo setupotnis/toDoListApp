@@ -17,3 +17,17 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Directory Structure
+ToDoListApp
+- pages
+    - components
+    - index.tsx
+    - _app.tsx
+- public
+- styles
+- .gitignore
+- package.json
+- README.md
+- tsconfig.json
+
