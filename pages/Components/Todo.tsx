@@ -42,17 +42,14 @@ const Todo: NextComponentType = ({
         {todo.text}
       </div>
       <div className={styles.icons}>
-        <IconButton aria-label="edit">
-          <EditIcon
-            className={styles.editIcon}
-            onClick={() => setEdit({ id: todo.id, text: todo.text })}
-          />
+        <IconButton
+          aria-label="edit"
+          onClick={() => setEdit({ id: todo.id, text: todo.text })}
+        >
+          <EditIcon className={styles.editIcon} />
         </IconButton>
-        <IconButton aria-label="delete">
-          <DeleteIcon
-            className={styles.deleteIcon}
-            onClick={() => deleteTodo(todo.id)}
-          />
+        <IconButton aria-label="delete" onClick={() => deleteTodo(todo.id)}>
+          <DeleteIcon className={styles.deleteIcon} />
         </IconButton>
       </div>
     </div>
