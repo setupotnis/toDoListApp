@@ -1,0 +1,19 @@
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  width: 90%;
+  padding: 3em;
+}
+
+.todo-button {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  height: fit-content;
+  outline: none;
+  color: #fff;
+  text-transform: capitalize;
+}
