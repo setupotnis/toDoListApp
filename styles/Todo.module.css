@@ -9,12 +9,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 4px auto;
+  margin: 2px auto;
   color: #fff;
   background: linear-gradient(90deg, #2e646b 0%, #317589 100%);
-  padding: 16px;
-  border-radius: 5px;
-  width: 90%;
+  padding: 10px;
+  border-radius: 3px;
+  width: 50%;
 }
 
 .complete {

@@ -1,19 +1,11 @@
 import { NextComponentType } from "next";
 import React, { useEffect, useRef, useState } from "react";
 import styles from "../../styles/AddTask.module.css";
-import { Button, Card, TextField } from "@mui/material";
+import TextArea from "./TextArea";
 
-const toDoButtonStyle = {
-  padding: "16px",
-  border: "none",
-  borderRadius: "0 4px 4px 0",
-  cursor: "pointer",
-  height: "fit-content",
-  outline: "none",
-  display: "inline",
-  top: "9px",
-  width: "15%",
-};
+const updateLabel = "UPDATE";
+const addItemlabel = "Item";
+const add = "ADD";
 
 const AddTask: NextComponentType = ({ onSubmit, edit }) => {
   const [input, setInput] = useState(edit ? edit.value : "");
@@ -40,49 +32,25 @@ const AddTask: NextComponentType = ({ onSubmit, edit }) => {
     <div className={styles.panel}>
       {edit ? (
         <>
-          <Card sx={{ minWidth: 700 }}>
-            <TextField
-              fullWidth
-              id="outlined-basic"
-              label={edit.text}
-              variant="outlined"
-              value={input}
-              style={{ margin: 10, maxWidth: "80%" }}
-              onChange={handleChange}
-              inputRef={inputRef}
-            />
-            <Button
-              type="submit"
-              variant="contained"
-              style={toDoButtonStyle}
-              onClick={handleSubmit}
-            >
-              Update
-            </Button>
-          </Card>
+          <TextArea
+            input={input}
+            handleChange={handleChange}
+            inputRef={inputRef}
+            handleSubmit={handleSubmit}
+            label={edit.text}
+            buttonLabel={updateLabel}
+          />
         </>
       ) : (
         <>
-          <Card sx={{ minWidth: 700 }}>
-            <TextField
-              fullWidth
-              id="outlined-basic"
-              label="Item"
-              variant="outlined"
-              value={input}
-              style={{ margin: 10, maxWidth: "80%" }}
-              onChange={handleChange}
-              inputRef={inputRef}
-            />
-            <Button
-              type="submit"
-              variant="contained"
-              style={toDoButtonStyle}
-              onClick={handleSubmit}
-            >
-              Add
-            </Button>
-          </Card>
+          <TextArea
+            input={input}
+            handleChange={handleChange}
+            inputRef={inputRef}
+            handleSubmit={handleSubmit}
+            label={addItemlabel}
+            buttonLabel={add}
+          />
         </>
       )}
     </div>
