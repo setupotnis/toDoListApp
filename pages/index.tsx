@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
-import AddTask from "./AddTask";
-import Header from "./Header";
+import Header from "./Components/Header";
+import List from "./Components/List";
 
 const Home: NextPage = () => {
   return (
     <>
       <Header />
-      <AddTask />
+      <List />
     </>
   );
 };
