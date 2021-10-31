@@ -1,10 +1,12 @@
 .panel {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  justify-content: start;
+  text-align: center;
+  border-radius: 10px;
+  padding: 16px;
   margin: 4px auto;
   width: 90%;
-  padding: 3em;
 }
 
 .todo-button {
@@ -15,5 +17,4 @@
   height: fit-content;
   outline: none;
   color: #fff;
-  text-transform: capitalize;
 }
